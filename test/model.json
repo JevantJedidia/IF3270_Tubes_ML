@@ -1,0 +1,48 @@
+{
+    "case": {
+        "model": {
+            "input_size": 3,
+            "layers": [
+                {
+                    "number_of_neurons": 2,
+                    "activation_function": "linear"
+                },
+                {
+                    "number_of_neurons": 2,
+                    "activation_function": "sigmoid"
+                },
+                {
+                    "number_of_neurons": 3,
+                    "activation_function": "softmax"
+                }
+            ]
+        },
+        "input": [
+            [1.0, 0.0, 1.0]
+        ],
+        "weights": [
+            [
+                [-1,-2],
+                [1.5,-1.5],
+                [-2,1.5],
+                [2.5,1]
+            ],
+            [
+                [-1,1],
+                [0.5,1.5],
+                [2,-1]
+            ],
+            [
+                [1.5,-1,1.5],
+                [2,1,2],
+                [1,-1.5,-2]
+            ]
+        ]
+    },
+    "expect": {
+        "output": [
+            [0.946482, 0.006316, 0.0472008]
+        ],
+        "max_sse": 0.000001
+    }
+}
